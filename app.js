@@ -45,7 +45,7 @@
       lpGarage:'The garage', lpLocked:'Costs are visible to members only', membersOnly:'Members only',
       bandT:'Part of the family or friends?', bandD:'Ask {admin} to add your email, then sign in with Google.',
       now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', daysShort:'{n} days left', dayShort:'1 day left', finished:'Finished and ready',
-      noBefore:'No photo yet', noAfter:'No photo yet', afterWait:'Added when done', repairCost:'Repair cost',
+      noBefore:'No photo yet', noAfter:'No photo yet', afterWait:'Added when done', repairCost:'Repair cost', sumCars:'Cars', sumRepair:'Repair costs, total', sumPaid:'Paid so far', sumActive:'In progress', sumNext:'Done first',
       stg_bought:'Bought', stg_shipping:'Shipping', stg_repair:'Repair', stg_paint:'Paint', stg_ready:'Ready',
       stageLabel:'Current stage', stageLeft:'Days left in this stage', planTitle:'Planned days per stage', planHint:'Visitors see the stage and the total days left, never the costs.',
       photoType:'Photo type', tag_before:'Before', tag_progress:'In progress', tag_after:'After',
@@ -93,7 +93,7 @@
       lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'წევრებისთვის',
       bandT:'ოჯახის ან მეგობრების წრიდან ხარ?', bandD:'სთხოვე {admin}-ს ელფოსტის დამატება და შედი Google-ით.',
       now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', daysShort:'{n} დღე დარჩა', dayShort:'1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
-      noBefore:'ფოტო ჯერ არ არის', noAfter:'ფოტო ჯერ არ არის', afterWait:'დაემატება დასრულებისას', repairCost:'რემონტის ხარჯი',
+      noBefore:'ფოტო ჯერ არ არის', noAfter:'ფოტო ჯერ არ არის', afterWait:'დაემატება დასრულებისას', repairCost:'რემონტის ხარჯი', sumCars:'მანქანები', sumRepair:'რემონტის ჯამი', sumPaid:'უკვე გადახდილი', sumActive:'მიმდინარეობს', sumNext:'პირველი დასრულდება',
       stg_bought:'ნაყიდია', stg_shipping:'ტრანსპორტირება', stg_repair:'შეკეთება', stg_paint:'შეღებვა', stg_ready:'მზადაა',
       stageLabel:'მიმდინარე ეტაპი', stageLeft:'დარჩენილი დღეები ამ ეტაპზე', planTitle:'დაგეგმილი დღეები ეტაპების მიხედვით', planHint:'სტუმრები ხედავენ ეტაპს და დარჩენილ დღეებს, ხარჯებს — არა.',
       photoType:'ფოტოს ტიპი', tag_before:'ადრე', tag_progress:'მიმდინარეობს', tag_after:'მერე',
@@ -306,8 +306,29 @@
     else { document.title = t('titleSuffix'); renderGarage(); }
   }
 
+  // numbers across the cars on screen (members only, since this page needs sign-in)
+  function renderSummary(cars){
+    $('summary').hidden = !cars.length;
+    if (!cars.length) return;
+    let repair = 0, paid = 0, next = null;
+    for (const c of cars){
+      const tt = totals(carItems(c.id)); repair += tt.projected; paid += tt.paid;
+      if (stageOf(c) !== 'ready' && (!next || daysLeft(c) < daysLeft(next))) next = c;
+    }
+    const active = cars.filter(c => stageOf(c) !== 'ready').length;
+    const tiles = [
+      {k:t('sumCars'), v:String(cars.length)},
+      {k:t('sumRepair'), v:fmt(repair)},
+      {k:t('sumPaid'), v:fmt(paid)},
+      {k:t('sumActive'), v:t('ofN', {a:active, b:cars.length})},
+      {k:t('sumNext'), v: next ? (daysLeft(next) === 1 ? t('dayShort') : t('daysShort', {n:daysLeft(next)})) : '—', sub: next ? next.name : ''}
+    ];
+    $('summary').innerHTML = tiles.map(x => `<div class="stat"><p class="k">${esc(x.k)}</p><p class="v num">${esc(x.v)}</p>${x.sub ? `<p class="k">${esc(x.sub)}</p>` : ''}</div>`).join('');
+  }
+
   function renderGarage(){
     const cars = S.cars.filter(c => S.scope === 'all' || isMine(c));
+    renderSummary(cars);
     if (!cars.length){
       $('cars').innerHTML = `<div class="empty"><p>${esc(S.scope === 'mine' && S.cars.length ? t('noMyCars') : t('noCars'))}</p><button class="btn primary" type="button" data-act="addcar">${esc(t('addCar'))}</button></div>`;
       return;

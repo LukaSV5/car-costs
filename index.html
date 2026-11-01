@@ -264,6 +264,10 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 /* phones: the top bar wraps there, so it scrolls away instead of staying fixed, and the intro panel is more compact */
 @media (max-width:600px){
   .top{position:static;margin-bottom:16px;padding:10px var(--gut)}
+  #summary{grid-template-columns:1fr 1fr;gap:8px}
+  #summary .stat{padding:12px 14px}
+  #summary .stat:last-child{grid-column:1/-1}
+  #summary .stat .v{font-size:19px}
   #vSignin .top .gsign{display:none}
   .top{flex-wrap:nowrap}
   .brand{font-size:15px;gap:8px;min-width:0}
@@ -368,6 +372,7 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
           <button id="addCarBtn" class="btn primary" type="button" data-i18n="addCar">Add car</button>
         </div>
       </div>
+      <section id="summary" class="stats" hidden></section>
       <div id="cars"></div>
     </section>
 
@@ -495,6 +500,6 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 
 <script src="config.js?v=20261101a"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script src="app.js?v=20261101c"></script>
+<script src="app.js?v=20261101e"></script>
 </body>
 </html>
