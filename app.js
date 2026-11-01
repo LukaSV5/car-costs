@@ -704,6 +704,7 @@
     const heroCar = P.cars.slice().reverse().find(c => c.cover_path && urlFor(c.cover_path));
     $('heroArt').innerHTML = heroCar ? `<img src="${esc(urlFor(heroCar.cover_path))}" alt="${esc(t('carPhotoAlt', {car:heroCar.name}))}">` : carArt();
     $('heroArt').classList.toggle('photo', !!heroCar);
+    $('heroArt').parentElement.hidden = !heroCar; // without a real photo the banner background picture is enough
     $('pubGarage').hidden = !P.cars.length;
     $('pubCars').innerHTML = P.cars.map(c => {
       const st = stageOf(c);
