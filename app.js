@@ -19,7 +19,7 @@
       searchPh:'Search items or notes', search:'Search', filterAria:'Filter by status', sortAria:'Sort',
       allStatuses:'All statuses', st_estimate:'Estimate', st_ordered:'Ordered', st_paid:'Paid',
       sortAdded:'Order added', sortCost:'Highest cost', sortCat:'Category', sortStatus:'Status', exportCsv:'Export CSV',
-      cat_auction:'Auction price', cat_fees:'Auction fees', cat_inland:'US transport', cat_body:'Body & panels', cat_parts:'Parts', cat_paint:'Paint', cat_labor:'Labor', cat_mech:'Mechanical', cat_elec:'Electrical', cat_ship:'Shipping & customs', cat_other:'Other',
+      cat_auction:'Auction price', cat_fees:'Auction fees', cat_body:'Body & panels', cat_parts:'Parts', cat_paint:'Paint', cat_labor:'Labor', cat_mech:'Mechanical', cat_elec:'Electrical', cat_ship:'Shipping to Georgia', cat_other:'Other',
       paidSoFar:'Paid so far', stillToPay:'Still to pay', overEst:'Over estimate', underEst:'Under estimate', onEst:'Against estimate',
       stillEst:'Items still estimated', ofN:'{a} of {b}', allIn:'All-in with purchase', profit:'Expected profit', loss:'Expected loss',
       hItem:'Item', hCat:'Category', hStatus:'Status', hEst:'Estimate', hAct:'Actual', notYet:'Not yet',
@@ -67,7 +67,7 @@
       searchPh:'ძებნა დასახელებით ან შენიშვნით', search:'ძებნა', filterAria:'სტატუსით გაფილტვრა', sortAria:'დალაგება',
       allStatuses:'ყველა სტატუსი', st_estimate:'სავარაუდო', st_ordered:'შეკვეთილი', st_paid:'გადახდილი',
       sortAdded:'დამატების რიგით', sortCost:'ყველაზე ძვირი', sortCat:'კატეგორიით', sortStatus:'სტატუსით', exportCsv:'CSV-ად გადმოწერა',
-      cat_auction:'აუქციონის ფასი', cat_fees:'აუქციონის საკომისიო', cat_inland:'ტრანსპორტი აშშ-ში', cat_body:'ძარა და დეტალები', cat_parts:'ნაწილები', cat_paint:'შეღებვა', cat_labor:'ხელობა', cat_mech:'მექანიკა', cat_elec:'ელექტროობა', cat_ship:'ტრანსპორტი და განბაჟება', cat_other:'სხვა',
+      cat_auction:'აუქციონის ფასი', cat_fees:'აუქციონის საკომისიო', cat_body:'ძარა და დეტალები', cat_parts:'ნაწილები', cat_paint:'შეღებვა', cat_labor:'ხელობა', cat_mech:'მექანიკა', cat_elec:'ელექტროობა', cat_ship:'გადაზიდვა საქართველოში', cat_other:'სხვა',
       paidSoFar:'უკვე გადახდილი', stillToPay:'დარჩენილი გადასახდელი', overEst:'შეფასებაზე მეტი', underEst:'შეფასებაზე ნაკლები', onEst:'სხვაობა შეფასებასთან',
       stillEst:'ჯერ სავარაუდო პოზიციები', ofN:'{a} / {b}', allIn:'სრული ხარჯი მანქანის ფასით', profit:'მოსალოდნელი მოგება', loss:'მოსალოდნელი ზარალი',
       hItem:'დასახელება', hCat:'კატეგორია', hStatus:'სტატუსი', hEst:'შეფასება', hAct:'ფაქტიური', notYet:'ჯერ არა',
@@ -115,7 +115,7 @@
     return s;
   }
 
-  const CATS = ['auction','fees','inland','ship','body','parts','paint','labor','mech','elec','other'];
+  const CATS = ['auction','fees','ship','body','parts','paint','labor','mech','elec','other'];
   const STAT_ORDER = {estimate:0, ordered:1, paid:2};
   const SYM = {GEL:'₾', USD:'$'};
   const STAGES = ['bought','shipping','repair','paint','ready'];
