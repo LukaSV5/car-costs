@@ -6,7 +6,7 @@
     en: {
       loading:'Loading…', brand:'Car costs', signinTitle:'Car repair costs', signinText:'For family and friends tracking cars bought in the US. Sign in to see everyone’s cars and keep track of your own.',
       signinGoogle:'Sign in with Google', deniedTitle:'You’re not on the list yet', deniedText:'{email} isn’t on the invite list. Ask {admin} to add this email, then sign in again.', signOut:'Sign out',
-      showIn:'Show totals in', rateAria:'GEL per 1 USD', checkKursi:'Check on kursi.ge', rateUpdated:'Updated {d}', rateBy:'Updated {d} by {name}',
+      showIn:'Show totals in', rateAria:'GEL per 1 USD', checkKursi:'kursi.ge ↗', rateUpdated:'Updated {d}', rateBy:'Updated {d} by {name}',
       members:'Members', membersHint:'People on this list can sign in with Google using exactly this email.', addMember:'Add', emailAria:'Email to invite', remove:'Remove', confirmRemove:'Confirm', admin:'Admin', you:'you',
       errEmail:'Enter a valid email.', errExists:'That email is already on the list.',
       garage:'Garage', allCars:'All cars', myCars:'My cars', addCar:'Add car', yours:'Yours', ownerBy:'{name}’s car', ownerYou:'Your car',
@@ -54,7 +54,7 @@
     ka: {
       loading:'იტვირთება…', brand:'მანქანების ხარჯები', signinTitle:'მანქანის რემონტის ხარჯები', signinText:'ოჯახისა და მეგობრებისთვის, ვინც ამერიკიდან ჩამოიყვანა მანქანა. შედი, რომ ნახო ყველას მანქანები და აღრიცხო შენი ხარჯები.',
       signinGoogle:'შესვლა Google-ით', deniedTitle:'ჯერ სიაში არ ხარ', deniedText:'{email} მოწვეულთა სიაში არ არის. სთხოვე {admin}-ს დაამატოს ეს ელფოსტა და შემდეგ თავიდან შედი.', signOut:'გასვლა',
-      showIn:'ჯამების ვალუტა', rateAria:'ლარი 1 დოლარზე', checkKursi:'kursi.ge-ზე ნახვა', rateUpdated:'განახლდა {d}', rateBy:'განახლდა {d}, {name}',
+      showIn:'ჯამების ვალუტა', rateAria:'ლარი 1 დოლარზე', checkKursi:'kursi.ge ↗', rateUpdated:'განახლდა {d}', rateBy:'განახლდა {d}, {name}',
       members:'წევრები', membersHint:'ამ სიაში მყოფ ადამიანებს შეუძლიათ შესვლა Google-ით, ზუსტად ამ ელფოსტით.', addMember:'დამატება', emailAria:'მოსაწვევი ელფოსტა', remove:'წაშლა', confirmRemove:'დადასტურება', admin:'ადმინი', you:'შენ',
       errEmail:'მიუთითე სწორი ელფოსტა.', errExists:'ეს ელფოსტა უკვე სიაშია.',
       garage:'ავტოფარეხი', allCars:'ყველა მანქანა', myCars:'ჩემი მანქანები', addCar:'მანქანის დამატება', yours:'შენი', ownerBy:'მფლობელი: {name}', ownerYou:'შენი მანქანა',

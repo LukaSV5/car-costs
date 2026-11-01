@@ -45,13 +45,17 @@ button,input,select,textarea{font:inherit;color:inherit}
 .seg button{border:0;background:transparent;padding:4px 12px;cursor:pointer;font-size:13px;font-weight:600;color:var(--muted);border-radius:999px}
 .seg button:hover{color:var(--ink)}
 .seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.rate-box{display:flex;flex-direction:column;gap:2px}
-.rate{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:13px}
-.rate input{width:72px;padding:4px 8px;border:1px solid var(--line);border-radius:8px;background:var(--field)}
-.rate-meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-size:12px;color:var(--muted)}
-.rate-meta a{color:var(--accent-text)}
-.who{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
-.who #whoName{font-weight:600;color:var(--ink)}
+.rate-box{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;padding:3px 14px 3px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px}
+.rate{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:13px;white-space:nowrap}
+.rate input{width:64px;padding:3px 8px;border:1px solid var(--line);border-radius:8px;background:var(--field);font-weight:600;color:var(--ink)}
+.rate-meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);white-space:nowrap}
+.rate-meta a{color:var(--accent-text);font-weight:600;text-decoration:none}
+.rate-meta a:hover{text-decoration:underline}
+.rate-meta #rateDate:not(:empty)::before{content:"·";margin-right:8px}
+.who{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding-left:14px;border-left:1px solid var(--line)}
+.who #whoName{font-weight:700;color:var(--ink);margin-right:4px}
+.who .link{border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--ink);font-size:13px;font-weight:600;background:var(--surface)}
+.who .link:hover{border-color:#44444B;text-decoration:none}
 
 /* buttons */
 .btn{border:1px solid var(--line);background:var(--surface);padding:8px 16px;border-radius:10px;cursor:pointer;font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
@@ -274,6 +278,7 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
   .brand::before{width:6px;height:16px;flex:none}
   .seg button{padding:4px 9px;font-size:12px}
   #vApp .top{flex-wrap:wrap}
+  .who{border-left:0;padding-left:0}
   .intro{padding:20px;gap:8px;border-radius:20px;min-height:0;background:linear-gradient(180deg,rgba(10,10,11,.55) 0%,rgba(10,10,11,.92) 70%),url(images/hero-dark-sedan.jpg) 70% 85%/150% auto no-repeat,#000}
   .intro .art{aspect-ratio:2/1}
   .intro .art .chip{display:none}
@@ -500,6 +505,6 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 
 <script src="config.js?v=20261101a"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script src="app.js?v=20261101e"></script>
+<script src="app.js?v=20261101f"></script>
 </body>
 </html>
