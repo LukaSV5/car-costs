@@ -20,6 +20,11 @@ Tables: `members`, `cars`, `items`, `photos`, `app_settings`. Photos are files i
 - `photos.tag` is `before`, `progress` or `after`.
 - The landing page tolerates a missing `public_garage()` (it just hides the garage section), but saving cars or photos needs the new columns, so apply the SQL before pushing.
 
+## Design
+- Dark only, red accent (`--accent`), full-width left-aligned layout inspired by caucasusauto.com but simpler. All CSS is in the `<style>` block of `index.html`.
+- One font family, Noto Sans Georgian (it has Latin letters too), for both languages, so English and Georgian keep the same sizes and line lengths. Do not add language-specific font sizes; keep the English and Georgian texts about the same length instead.
+- Never use `text-transform:uppercase`: it turns Georgian into Mtavruli capitals.
+
 ## Rules
 - Never put the Supabase `service_role` key, the Google client secret or any password in any file. Only the public anon key belongs in `config.js`. Do not write keys into this file either.
 - The owner allowed Claude to commit and push to `main` (changed on 2026-11-01; before that it was manual in GitHub Desktop). After each change: check `git status` and `git diff` for secrets first, commit with a clear message, push, and tell the owner what was pushed. The site is public on GitHub Pages, so never push anything unfinished or secret.

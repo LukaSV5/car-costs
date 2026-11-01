@@ -44,7 +44,7 @@
       p3t:'Before and after', p3d:'Real photos from before any work starts, and again when it is done.',
       lpGarage:'The garage', lpLocked:'Costs are visible to members only', membersOnly:'Members only',
       bandT:'Part of the family or friends?', bandD:'Ask {admin} to add your email, then sign in with Google.',
-      now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', finished:'Finished and ready',
+      now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', daysShort:'{n} days left', dayShort:'1 day left', finished:'Finished and ready',
       noBefore:'No before photo yet', noAfter:'No after photo yet', afterWait:'The after photo is added when it is done',
       stg_bought:'Bought', stg_shipping:'Shipping', stg_repair:'Repair', stg_paint:'Paint', stg_ready:'Ready',
       stageLabel:'Current stage', stageLeft:'Days left in this stage', planTitle:'Planned days per stage', planHint:'Visitors see the stage and the total days left, never the costs.',
@@ -92,7 +92,7 @@
       p3t:'ადრე და მერე', p3d:'რეალური ფოტოები სამუშაოს დაწყებამდე და დასრულების შემდეგ.',
       lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'მხოლოდ წევრებისთვის',
       bandT:'ოჯახის ან მეგობრების წრიდან ხარ?', bandD:'სთხოვე {admin}-ს ელფოსტის დამატება და შედი Google-ით.',
-      now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
+      now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', daysShort:'{n} დღე დარჩა', dayShort:'1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
       noBefore:'„ადრე“ ფოტო ჯერ არ არის', noAfter:'„მერე“ ფოტო ჯერ არ არის', afterWait:'„მერე“ ფოტო დაემატება დასრულების შემდეგ',
       stg_bought:'ნაყიდია', stg_shipping:'ტრანსპორტირება', stg_repair:'შეკეთება', stg_paint:'შეღებვა', stg_ready:'მზადაა',
       stageLabel:'მიმდინარე ეტაპი', stageLeft:'დარჩენილი დღეები ამ ეტაპზე', planTitle:'დაგეგმილი დღეები ეტაპების მიხედვით', planHint:'სტუმრები ხედავენ ეტაპს და დარჩენილ დღეებს, ხარჯებს — არა.',
@@ -218,6 +218,11 @@
     const cur = STAGES.indexOf(stageOf(c)), ready = cur === STAGES.length - 1;
     return '<div class="steps">' + STAGES.map((s, i) => `<span class="s${i < cur || ready ? ' done' : i === cur ? ' now' : ''}"><span>${esc(t('stg_' + s))}</span></span>`).join('') + '</div>';
   }
+  const CLOCK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  function chipsHtml(c){ // stage and days left, shown on the car photo
+    const st = stageOf(c), d = daysLeft(c);
+    return `<div class="chips"><span class="chip"><i></i>${esc(t('stg_' + st))}</span>${st === 'ready' ? '' : `<span class="chip num">${CLOCK_SVG}${esc(d === 1 ? t('dayShort') : t('daysShort', {n:d}))}</span>`}</div>`;
+  }
   const tagOf = p => TAGS.includes(p.tag) ? p.tag : 'progress';
 
   function totals(items){
@@ -310,11 +315,11 @@
       const p = num(c.purchase);
       const pic = c.cover_path && urlFor(c.cover_path) ? `<img src="${esc(urlFor(c.cover_path))}" alt="" loading="lazy">` : carArt();
       return `<button class="card" type="button" data-car="${esc(c.id)}">
-        <div class="pic">${pic}${isMine(c) ? `<span class="mine">${esc(t('yours'))}</span>` : ''}<span class="chip"><i></i>${esc(t('stg_' + stageOf(c)))}</span></div>
+        <div class="pic">${pic}${isMine(c) ? `<span class="mine">${esc(t('yours'))}</span>` : ''}${chipsHtml(c)}</div>
         <div class="body">
           <h2>${esc(c.name)}</h2>
           <p class="owner">${esc(isMine(c) ? t('ownerYou') : t('ownerBy', {name:c.owner_name || '—'}))}</p>
-          <div class="stack"><div class="status">${statusLine(c)}</div>${stepsHtml(c)}</div>
+          <div class="stack">${stepsHtml(c)}</div>
           <div class="fig num">${fmt(tt.projected)}</div>
           <div class="sub">${esc(t('cardRepair', {v:''}).trim())} · ${esc(t(its.length === 1 ? 'cardItems1' : 'cardItemsN', {n:its.length}))}</div>
           ${p != null ? `<div class="sub num">${esc(t('cardAllIn', {v:fmt(conv(p, c.purchase_cur) + tt.projected)}))}</div>` : ''}
@@ -701,10 +706,9 @@
       const st = stageOf(c);
       const cover = c.cover_path && urlFor(c.cover_path);
       return `<article class="proj">
-        <div class="pic">${cover ? `<img src="${esc(cover)}" alt="${esc(t('carPhotoAlt', {car:c.name}))}" loading="lazy">` : carArt()}<span class="chip"><i></i>${esc(t('stg_' + st))}</span></div>
+        <div class="pic">${cover ? `<img src="${esc(cover)}" alt="${esc(t('carPhotoAlt', {car:c.name}))}" loading="lazy">` : carArt()}${chipsHtml(c)}</div>
         <div class="body">
           <h3>${esc(c.name)}</h3>
-          <div class="status">${statusLine(c)}</div>
           ${stepsHtml(c)}
           <div class="ba">${showcaseFig(c.before_path, 'before', t('tag_before'), t('noBefore'))}${showcaseFig(c.after_path, 'after', t('tag_after'), t(st === 'ready' ? 'noAfter' : 'afterWait'))}</div>
           <div class="cost"><span>${esc(t('heroLabel'))}</span><span class="lock">${LOCK_SVG}${esc(t('membersOnly'))}</span></div>
