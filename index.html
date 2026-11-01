@@ -263,6 +263,15 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 .cta-band{margin-top:48px;background:var(--panel);color:#F4F1EC;border-radius:24px;padding:30px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;border:1px solid #2B3038;box-shadow:var(--shadow-up)}
 .cta-band h2{margin:0 0 4px;font:700 clamp(30px,5vw,40px)/1.05 var(--cond)}
 .cta-band p{margin:0;color:#A9B0BA;max-width:56ch}
+/* Georgian letters are wider than the Latin ones the sizes above were made for, so headings are smaller there */
+html[lang="ka"] .intro h1{font-size:clamp(28px,4.4vw,48px);line-height:1.2}
+html[lang="ka"] .garage-head h1{font-size:clamp(30px,5vw,42px);line-height:1.15}
+html[lang="ka"] .sec-head h2{font-size:clamp(26px,4.4vw,36px);line-height:1.15}
+html[lang="ka"] .photos-head h2,html[lang="ka"] .dlg h2{font-size:24px;line-height:1.2}
+html[lang="ka"] .cta-band h2{font-size:clamp(24px,4vw,32px);line-height:1.2}
+html[lang="ka"] .points h2{font-size:20px;line-height:1.2}
+html[lang="ka"] .gate h1{font-size:clamp(26px,5vw,36px);line-height:1.2}
+html[lang="ka"] .brand{font-size:24px}
 @media (max-width:760px){.intro{grid-template-columns:1fr}.intro .art{order:-1;aspect-ratio:16/10}.steps .s span{display:none}.steps .s.now span{display:block}.fieldset-lite{grid-template-columns:1fr}}
 </style>
 </head>

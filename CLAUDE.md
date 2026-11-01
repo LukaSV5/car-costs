@@ -22,7 +22,7 @@ Tables: `members`, `cars`, `items`, `photos`, `app_settings`. Photos are files i
 
 ## Rules
 - Never put the Supabase `service_role` key, the Google client secret or any password in any file. Only the public anon key belongs in `config.js`. Do not write keys into this file either.
-- Do not run `git commit` or `git push`. The owner reviews changes in GitHub Desktop and pushes themself.
+- The owner allowed Claude to commit and push to `main` (changed on 2026-11-01; before that it was manual in GitHub Desktop). After each change: check `git status` and `git diff` for secrets first, commit with a clear message, push, and tell the owner what was pushed. The site is public on GitHub Pages, so never push anything unfinished or secret.
 - Keep everything working in both English and Georgian: every new user-visible string needs entries in both `en` and `ka` in `I18N` in `app.js` (or a `data-i18n` key for HTML text).
 - Database changes need SQL that the owner pastes into Supabase themself. Give the SQL as a separate, clearly marked block; never assume it has been applied.
 - No build step or dependencies to install: edit the files directly and test by opening `index.html` via a local static server.
