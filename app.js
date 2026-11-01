@@ -245,13 +245,15 @@
   function fail(error, key){ console.error(error); toast(t(key || 'errSave')); }
 
   async function signedUrls(paths){
-    const missing = paths.filter(p => p && !urlCache.has(p));
+    const missing = paths.filter(p => p && !isSitePhoto(p) && !urlCache.has(p));
     if (missing.length){
       const {data, error} = await sb.storage.from(BUCKET).createSignedUrls(missing, 60 * 60 * 6);
       if (!error && data) data.forEach(d => { if (d.signedUrl) urlCache.set(d.path, d.signedUrl); });
     }
   }
-  const urlFor = p => urlCache.get(p) || '';
+  // a cover can also be a file that ships with the site (images/...), e.g. a placeholder until real photos exist
+  const isSitePhoto = p => /^images\/[\w.-]+$/.test(p || '');
+  const urlFor = p => isSitePhoto(p) ? p : (urlCache.get(p) || '');
 
   // two-step delete buttons
   function armable(btn, labelKey, confirmKey, onConfirm){
@@ -701,7 +703,7 @@
   }
   function renderLanding(){
     // the banner shows the newest car's cover photo, or the drawing until there is one
-    const heroCar = P.cars.slice().reverse().find(c => c.cover_path && urlFor(c.cover_path));
+    const heroCar = P.cars.slice().reverse().find(c => c.cover_path && !isSitePhoto(c.cover_path) && urlFor(c.cover_path));
     $('heroArt').innerHTML = heroCar ? `<img src="${esc(urlFor(heroCar.cover_path))}" alt="${esc(t('carPhotoAlt', {car:heroCar.name}))}">` : carArt();
     $('heroArt').classList.toggle('photo', !!heroCar);
     $('heroArt').parentElement.hidden = !heroCar; // without a real photo the banner background picture is enough
