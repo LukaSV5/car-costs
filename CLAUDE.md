@@ -25,6 +25,10 @@ Tables: `members`, `cars`, `items`, `photos`, `app_settings`. Photos are files i
 - One font family, Noto Sans Georgian (it has Latin letters too), for both languages, so English and Georgian keep the same sizes and line lengths. Do not add language-specific font sizes; keep the English and Georgian texts about the same length instead.
 - Never use `text-transform:uppercase`: it turns Georgian into Mtavruli capitals.
 
+## Totals
+- Every amount is a cost item (`items`), including the auction price and fees (categories `auction`, `fees`). The car's total is the sum of all its items, each converted with the shared exchange rate into the chosen display currency (GEL or USD). Expected profit = expected sale price minus that total.
+- `cars.purchase` and `cars.purchase_cur` are old columns: no longer shown or used in any total (do not add them back to the total, it double counts the auction price).
+
 ## Rules
 - Never put the Supabase `service_role` key, the Google client secret or any password in any file. Only the public anon key belongs in `config.js`. Do not write keys into this file either.
 - The owner allowed Claude to commit and push to `main` (changed on 2026-11-01; before that it was manual in GitHub Desktop). After each change: check `git status` and `git diff` for secrets first, commit with a clear message, push, and tell the owner what was pushed. The site is public on GitHub Pages, so never push anything unfinished or secret.

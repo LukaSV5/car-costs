@@ -11,11 +11,11 @@
       errEmail:'Enter a valid email.', errExists:'That email is already on the list.',
       garage:'Garage', allCars:'All cars', myCars:'My cars', addCar:'Add car', yours:'Yours', ownerBy:'{name}’s car', ownerYou:'Your car',
       noCars:'No cars yet. Add the first one to start tracking costs.', noMyCars:'You haven’t added a car yet.',
-      cardRepair:'{v} projected repair', cardAllIn:'{v} all-in with purchase', cardItems1:'{n} cost', cardItemsN:'{n} costs',
+      cardRepair:'{v} total cost', cardItems1:'{n} cost', cardItemsN:'{n} costs',
       back:'Back to garage', editCar:'Edit car', newCar:'Add car', saveCar:'Save car', carNameLabel:'Car', carNamePh:'BMW F44, Jeep Wrangler…',
-      carHint:'Prices are optional. Add them to see the all-in cost and expected profit.', deleteCar:'Delete car', confirmDeleteCar:'Delete car and all its costs',
+      carHint:'The expected sale price is optional. Add it to see the expected profit. Put the auction price and fees in as costs.', deleteCar:'Delete car', confirmDeleteCar:'Delete car and all its costs',
       errCarName:'Give the car a name.',
-      heroLabel:'Projected repair cost', addCost:'Add cost', editCost:'Edit cost', saveChanges:'Save changes',
+      heroLabel:'Total cost', addCost:'Add cost', editCost:'Edit cost', saveChanges:'Save changes',
       searchPh:'Search items or notes', search:'Search', filterAria:'Filter by status', sortAria:'Sort',
       allStatuses:'All statuses', st_estimate:'Estimate', st_ordered:'Ordered', st_paid:'Paid',
       sortAdded:'Order added', sortCost:'Highest cost', sortCat:'Category', sortStatus:'Status', exportCsv:'Export CSV',
@@ -45,7 +45,7 @@
       lpGarage:'The garage', lpLocked:'Costs are visible to members only', membersOnly:'Members only',
       bandT:'Part of the family or friends?', bandD:'Ask {admin} to add your email, then sign in with Google.',
       now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', daysShort:'{n} days left', dayShort:'1 day left', finished:'Finished and ready',
-      noBefore:'No photo yet', noAfter:'No photo yet', afterWait:'Added when done', repairCost:'Repair cost', sumCars:'Cars', sumRepair:'Repair costs, total', sumPaid:'Paid so far', sumActive:'In progress', sumNext:'Done first',
+      noBefore:'No photo yet', noAfter:'No photo yet', afterWait:'Added when done', repairCost:'Total cost', sumCars:'Cars', sumRepair:'Total costs', sumPaid:'Paid so far', sumActive:'In progress', sumNext:'Done first',
       stg_bought:'Bought', stg_shipping:'Shipping', stg_repair:'Repair', stg_paint:'Paint', stg_ready:'Ready',
       stageLabel:'Current stage', stageLeft:'Days left in this stage', planTitle:'Planned days per stage', planHint:'Visitors see the stage and the total days left, never the costs.',
       photoType:'Photo type', tag_before:'Before', tag_progress:'In progress', tag_after:'After',
@@ -59,11 +59,11 @@
       errEmail:'მიუთითე სწორი ელფოსტა.', errExists:'ეს ელფოსტა უკვე სიაშია.',
       garage:'ავტოფარეხი', allCars:'ყველა მანქანა', myCars:'ჩემი მანქანები', addCar:'მანქანის დამატება', yours:'შენი', ownerBy:'მფლობელი: {name}', ownerYou:'შენი მანქანა',
       noCars:'მანქანები ჯერ არ არის. დაამატე პირველი და დაიწყე ხარჯების აღრიცხვა.', noMyCars:'შენ ჯერ მანქანა არ დაგიმატებია.',
-      cardRepair:'{v} რემონტის სავარაუდო ხარჯი', cardAllIn:'{v} სულ, მანქანის ფასით', cardItems1:'{n} ხარჯი', cardItemsN:'{n} ხარჯი',
+      cardRepair:'{v} ჯამური ხარჯი', cardItems1:'{n} ხარჯი', cardItemsN:'{n} ხარჯი',
       back:'ავტოფარეხში დაბრუნება', editCar:'მანქანის რედაქტირება', newCar:'მანქანის დამატება', saveCar:'შენახვა', carNameLabel:'მანქანა', carNamePh:'BMW F44, Jeep Wrangler…',
-      carHint:'ფასები არასავალდებულოა. დაამატე, რომ ნახო სრული ხარჯი და მოსალოდნელი მოგება.', deleteCar:'მანქანის წაშლა', confirmDeleteCar:'წაშალე მანქანა და მისი ხარჯები',
+      carHint:'სავარაუდო გაყიდვის ფასი არასავალდებულოა. დაამატე, რომ ნახო მოსალოდნელი მოგება. აუქციონის ფასი და საკომისიო ხარჯებად დაამატე.', deleteCar:'მანქანის წაშლა', confirmDeleteCar:'წაშალე მანქანა და მისი ხარჯები',
       errCarName:'მიუთითე მანქანის სახელი.',
-      heroLabel:'რემონტის სავარაუდო ხარჯი', addCost:'ხარჯის დამატება', editCost:'ხარჯის რედაქტირება', saveChanges:'ცვლილებების შენახვა',
+      heroLabel:'ჯამური ხარჯი', addCost:'ხარჯის დამატება', editCost:'ხარჯის რედაქტირება', saveChanges:'ცვლილებების შენახვა',
       searchPh:'ძებნა დასახელებით ან შენიშვნით', search:'ძებნა', filterAria:'სტატუსით გაფილტვრა', sortAria:'დალაგება',
       allStatuses:'ყველა სტატუსი', st_estimate:'სავარაუდო', st_ordered:'შეკვეთილი', st_paid:'გადახდილი',
       sortAdded:'დამატების რიგით', sortCost:'ყველაზე ძვირი', sortCat:'კატეგორიით', sortStatus:'სტატუსით', exportCsv:'CSV-ად გადმოწერა',
@@ -93,7 +93,7 @@
       lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'წევრებისთვის',
       bandT:'ოჯახის ან მეგობრების წრიდან ხარ?', bandD:'სთხოვე {admin}-ს ელფოსტის დამატება და შედი Google-ით.',
       now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', daysShort:'{n} დღე დარჩა', dayShort:'1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
-      noBefore:'ფოტო ჯერ არ არის', noAfter:'ფოტო ჯერ არ არის', afterWait:'დაემატება დასრულებისას', repairCost:'რემონტის ხარჯი', sumCars:'მანქანები', sumRepair:'რემონტის ჯამი', sumPaid:'უკვე გადახდილი', sumActive:'მიმდინარეობს', sumNext:'პირველი დასრულდება',
+      noBefore:'ფოტო ჯერ არ არის', noAfter:'ფოტო ჯერ არ არის', afterWait:'დაემატება დასრულებისას', repairCost:'ჯამური ხარჯი', sumCars:'მანქანები', sumRepair:'ჯამური ხარჯები', sumPaid:'უკვე გადახდილი', sumActive:'მიმდინარეობს', sumNext:'პირველი დასრულდება',
       stg_bought:'ნაყიდია', stg_shipping:'ტრანსპორტირება', stg_repair:'შეკეთება', stg_paint:'შეღებვა', stg_ready:'მზადაა',
       stageLabel:'მიმდინარე ეტაპი', stageLeft:'დარჩენილი დღეები ამ ეტაპზე', planTitle:'დაგეგმილი დღეები ეტაპების მიხედვით', planHint:'სტუმრები ხედავენ ეტაპს და დარჩენილ დღეებს, ხარჯებს — არა.',
       photoType:'ფოტოს ტიპი', tag_before:'ადრე', tag_progress:'მიმდინარეობს', tag_after:'მერე',
@@ -335,7 +335,6 @@
     }
     $('cars').innerHTML = '<div class="cars">' + cars.map(c => {
       const its = carItems(c.id), tt = totals(its);
-      const p = num(c.purchase);
       const pic = c.cover_path && urlFor(c.cover_path) ? `<img src="${esc(urlFor(c.cover_path))}" alt="" loading="lazy">` : carArt();
       return `<button class="card" type="button" data-car="${esc(c.id)}">
         <div class="pic">${pic}${isMine(c) ? `<span class="mine">${esc(t('yours'))}</span>` : ''}${chipsHtml(c)}</div>
@@ -345,7 +344,6 @@
           <div class="stack">${stepsHtml(c)}</div>
           <div class="fig num">${fmt(tt.projected)}</div>
           <div class="sub">${esc(t('cardRepair', {v:''}).trim())} · ${esc(t(its.length === 1 ? 'cardItems1' : 'cardItemsN', {n:its.length}))}</div>
-          ${p != null ? `<div class="sub num">${esc(t('cardAllIn', {v:fmt(conv(p, c.purchase_cur) + tt.projected)}))}</div>` : ''}
         </div>
       </button>`;
     }).join('') + '</div>';
@@ -373,14 +371,10 @@
       stats.push({k: over ? t('overEst') : under ? t('underEst') : t('onEst'), v:fmt(Math.abs(tt.variance)), cls: over ? 'bad' : under ? 'good' : ''});
     }
     stats.push({k:t('stillEst'), v:t('ofN', {a:tt.estOnly, b:items.length})});
-    const p = num(car.purchase), sale = num(car.sale);
-    if (p != null){
-      const allIn = conv(p, car.purchase_cur) + tt.projected;
-      stats.push({k:t('allIn'), v:fmt(allIn)});
-      if (sale != null){
-        const m = conv(sale, car.sale_cur) - allIn;
-        stats.push({k: m >= 0 ? t('profit') : t('loss'), v:fmt(Math.abs(m)), cls: m >= 0 ? 'good' : 'bad'});
-      }
+    const sale = num(car.sale);
+    if (sale != null){ // everything, including the auction price and fees, is a cost item, so the total already is the all-in cost
+      const m = conv(sale, car.sale_cur) - tt.projected;
+      stats.push({k: m >= 0 ? t('profit') : t('loss'), v:fmt(Math.abs(m)), cls: m >= 0 ? 'good' : 'bad'});
     }
     $('stats').innerHTML = stats.map(x => `<div class="stat"><p class="k">${esc(x.k)}</p><p class="v num ${x.cls || ''}">${esc(x.v)}</p></div>`).join('');
 
@@ -496,8 +490,6 @@
     $('carSave').textContent = car ? t('saveCar') : t('addCar');
     $('carDel').hidden = !car; resetCarDel();
     $('cName').value = car ? car.name : '';
-    $('cPurchase').value = car && car.purchase != null ? car.purchase : '';
-    $('cPurchaseCur').value = car ? car.purchase_cur : 'USD';
     $('cSale').value = car && car.sale != null ? car.sale : '';
     $('cSaleCur').value = car ? car.sale_cur : 'USD';
     const plan = car ? planOf(car) : DEFAULT_PLAN;
@@ -517,9 +509,10 @@
     e.preventDefault();
     const name = $('cName').value.trim();
     if (!name){ $('carErr').textContent = t('errCarName'); return; }
-    const pv = $('cPurchase').value.trim(), sv = $('cSale').value.trim();
-    const row = {name, purchase: pv === '' ? null : num(pv), purchase_cur:$('cPurchaseCur').value, sale: sv === '' ? null : num(sv), sale_cur:$('cSaleCur').value};
-    if ((row.purchase ?? 0) < 0 || (row.sale ?? 0) < 0){ $('carErr').textContent = t('errNeg'); return; }
+    const sv = $('cSale').value.trim();
+    const row = {name, sale: sv === '' ? null : num(sv), sale_cur:$('cSaleCur').value};
+    if (!editingCar) row.purchase_cur = 'USD'; // old column, no longer used in any total
+    if ((row.sale ?? 0) < 0){ $('carErr').textContent = t('errNeg'); return; }
     const days = ['cLeft','cPlanShipping','cPlanRepair','cPlanPaint'].map(id => num($(id).value) ?? 0);
     if (days.some(d => d < 0)){ $('carErr').textContent = t('errNeg'); return; }
     Object.assign(row, {stage:$('cStage').value, stage_left:wholeDays(days[0]), plan:{shipping:wholeDays(days[1]), repair:wholeDays(days[2]), paint:wholeDays(days[3])}});
