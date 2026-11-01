@@ -263,9 +263,9 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 .cta-band{margin-top:48px;background:var(--panel);color:#F4F1EC;border-radius:24px;padding:30px;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between;border:1px solid #2B3038;box-shadow:var(--shadow-up)}
 .cta-band h2{margin:0 0 4px;font:700 clamp(26px,4vw,34px)/1.2 var(--cond);text-wrap:balance}
 .cta-band p{margin:0;color:#A9B0BA;max-width:64ch}
-/* same look in both languages: Georgian letters are wider, so they use the condensed width of the font while the sizes stay identical */
-html[lang="ka"] :is(h1,h2,h3,.brand,.fig,.total,.v){font-stretch:72%}
-html[lang="ka"] body{font-stretch:88%}
+/* same look in both languages: Georgian letters are wider, so headings use a slightly narrower width of the font while the sizes stay identical */
+html[lang="ka"] :is(h1,h2,h3,.brand,.fig,.total,.v){font-stretch:92%}
+html[lang="ka"] body{font-stretch:100%}
 @media (max-width:760px){.intro{grid-template-columns:1fr}.intro .art{order:-1;aspect-ratio:16/10}.steps .s span{display:none}.steps .s.now span{display:block}.fieldset-lite{grid-template-columns:1fr}}
 </style>
 </head>
