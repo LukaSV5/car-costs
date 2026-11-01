@@ -700,7 +700,10 @@
       : `<figure class="${cls} nophoto" data-note="${esc(note)}"><figcaption>${esc(label)}</figcaption></figure>`;
   }
   function renderLanding(){
-    $('heroArt').innerHTML = carArt();
+    // the banner shows the newest car's cover photo, or the drawing until there is one
+    const heroCar = P.cars.slice().reverse().find(c => c.cover_path && urlFor(c.cover_path));
+    $('heroArt').innerHTML = heroCar ? `<img src="${esc(urlFor(heroCar.cover_path))}" alt="${esc(t('carPhotoAlt', {car:heroCar.name}))}">` : carArt();
+    $('heroArt').classList.toggle('photo', !!heroCar);
     $('pubGarage').hidden = !P.cars.length;
     $('pubCars').innerHTML = P.cars.map(c => {
       const st = stageOf(c);
