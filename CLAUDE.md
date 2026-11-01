@@ -13,6 +13,13 @@ It is a static site hosted on GitHub Pages (public repo). Supabase provides sign
 ## Database (Supabase)
 Tables: `members`, `cars`, `items`, `photos`, `app_settings`. Photos are files in a Supabase Storage bucket; the `photos` table and `cars.cover_path` point to them. Data is protected by database access rules (RLS), not by hiding the anon key.
 
+## Visitors, members and progress
+- Signed-out visitors see a landing page (purpose, three feature tiles, and one card per car with cover photo, name, stage, days left, and the first Before / latest After photo). They never see costs, prices or owner names.
+- Visitor data comes only from the Postgres function `public_garage()` (no direct table access for the anon role). Showcase photos (cars' cover, photos tagged `before` / `after`) are readable by anon through a storage policy using `is_showcase_photo()`. `progress` photos stay members-only. Anything new shown to visitors must go through those two, never through open table policies.
+- `cars` has `stage` (bought, shipping, repair, paint, ready), `stage_left` (days left in the current stage) and `plan` (jsonb planned days for shipping, repair, paint). Days left = `stage_left` plus the planned days of later stages (`daysLeft()` in `app.js`).
+- `photos.tag` is `before`, `progress` or `after`.
+- The landing page tolerates a missing `public_garage()` (it just hides the garage section), but saving cars or photos needs the new columns, so apply the SQL before pushing.
+
 ## Rules
 - Never put the Supabase `service_role` key, the Google client secret or any password in any file. Only the public anon key belongs in `config.js`. Do not write keys into this file either.
 - Do not run `git commit` or `git push`. The owner reviews changes in GitHub Desktop and pushes themself.

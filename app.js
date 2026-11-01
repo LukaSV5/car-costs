@@ -36,6 +36,19 @@
       errName:'Give the item a name in at least one language.', errCost:'Enter an estimated or actual cost.', errNeg:'Costs can’t be negative.',
       errSave:'Couldn’t save. Check your connection and try again.', errLoad:'Couldn’t load the data. Refresh the page to try again.', errSignin:'Couldn’t start Google sign-in. Try again.',
       rateSaved:'Rate updated for everyone', titleSuffix:'Car costs',
+      signinShort:'Member sign in', lpH1:'Every car’s repair costs <em>in one place</em>',
+      lpLead:'A shared tracker for family and friends who buy cars in the US and fix them up. See what is being done to each car right now, how many days are left, and how it looked before and after.',
+      lpHint:'Family or friend? Sign in to see the costs.', lpChip:'Real cars, real progress',
+      p1t:'All costs in one place', p1d:'Parts, labor, shipping and paint for every car, with estimates next to what was actually paid. Costs are visible to members only.',
+      p2t:'Live progress', p2d:'Each car moves through clear stages. You can see what is happening now and about how many days are left until it is ready.',
+      p3t:'Before and after', p3d:'Real photos from before any work starts, and again when it is done.',
+      lpGarage:'The garage', lpLocked:'Costs are visible to members only', membersOnly:'Members only',
+      bandT:'Part of the family or friends?', bandD:'Ask {admin} to add your email, then sign in with Google to see every cost.',
+      now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', finished:'Finished and ready',
+      noBefore:'No before photo yet', noAfter:'No after photo yet', afterWait:'The after photo is added when it is done',
+      stg_bought:'Bought', stg_shipping:'Shipping', stg_repair:'Repair', stg_paint:'Paint', stg_ready:'Ready',
+      stageLabel:'Current stage', stageLeft:'Days left in this stage', planTitle:'Planned days per stage', planHint:'Visitors see the stage and the total days left, never the costs.',
+      photoType:'Photo type', tag_before:'Before', tag_progress:'In progress', tag_after:'After',
       csv:['Item (English)','Item (Georgian)','Category','Status','Quantity','Unit estimate','Unit actual','Currency','Line total ({c})','Note']
     },
     ka: {
@@ -71,6 +84,19 @@
       errName:'მიუთითე დასახელება მინიმუმ ერთ ენაზე.', errCost:'მიუთითე სავარაუდო ან ფაქტიური ფასი.', errNeg:'ფასი უარყოფითი ვერ იქნება.',
       errSave:'ვერ შეინახა. შეამოწმე ინტერნეტი და სცადე თავიდან.', errLoad:'მონაცემები ვერ ჩაიტვირთა. განაახლე გვერდი.', errSignin:'Google-ით შესვლა ვერ დაიწყო. სცადე თავიდან.',
       rateSaved:'კურსი ყველასთვის განახლდა', titleSuffix:'მანქანების ხარჯები',
+      signinShort:'წევრის შესვლა', lpH1:'ყველა მანქანის რემონტის ხარჯი <em>ერთ ადგილას</em>',
+      lpLead:'საერთო სივრცე ოჯახისა და მეგობრებისთვის, ვინც აშშ-დან მანქანებს ყიდულობს და აკეთებს. აქ ჩანს, რა კეთდება თითოეულ მანქანაზე ახლა, რამდენი დღე რჩება დასრულებამდე და როგორი იყო მანქანა ადრე და მერე.',
+      lpHint:'ოჯახიდან ან მეგობრებიდან ხარ? შედი და ნახე ხარჯები.', lpChip:'რეალური მანქანები, რეალური პროგრესი',
+      p1t:'ყველა ხარჯი ერთ ადგილას', p1d:'ნაწილები, ხელობა, ტრანსპორტი და შეღებვა თითოეულ მანქანაზე — სავარაუდო ხარჯი რეალურ ხარჯთან ერთად. ხარჯებს მხოლოდ წევრები ხედავენ.',
+      p2t:'რეალური პროგრესი', p2d:'თითოეული მანქანა გადის გასაგებ ეტაპებს. ჩანს, რა ხდება ახლა და დაახლოებით რამდენი დღე რჩება მზადყოფნამდე.',
+      p3t:'ადრე და მერე', p3d:'რეალური ფოტოები სამუშაოს დაწყებამდე და დასრულების შემდეგ.',
+      lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'მხოლოდ წევრებისთვის',
+      bandT:'ოჯახის ან მეგობრების წრიდან ხარ?', bandD:'სთხოვე {admin}-ს, დაგამატოს შენი ელფოსტა, შემდეგ Google-ით შედი და ნახავ ყველა ხარჯს.',
+      now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
+      noBefore:'„ადრე“ ფოტო ჯერ არ არის', noAfter:'„მერე“ ფოტო ჯერ არ არის', afterWait:'„მერე“ ფოტო დაემატება დასრულების შემდეგ',
+      stg_bought:'ნაყიდია', stg_shipping:'ტრანსპორტირება', stg_repair:'შეკეთება', stg_paint:'შეღებვა', stg_ready:'მზადაა',
+      stageLabel:'მიმდინარე ეტაპი', stageLeft:'დარჩენილი დღეები ამ ეტაპზე', planTitle:'დაგეგმილი დღეები ეტაპების მიხედვით', planHint:'სტუმრები ხედავენ ეტაპს და დარჩენილ დღეებს, ხარჯებს — არა.',
+      photoType:'ფოტოს ტიპი', tag_before:'ადრე', tag_progress:'მიმდინარეობს', tag_after:'მერე',
       csv:['დასახელება (ინგლისურად)','დასახელება (ქართულად)','კატეგორია','სტატუსი','რაოდენობა','ერთეულის შეფასება','ერთეულის ფაქტიური ფასი','ვალუტა','ჯამი ({c})','შენიშვნა']
     }
   };
@@ -92,6 +118,9 @@
   const CATS = ['body','parts','paint','labor','mech','elec','ship','other'];
   const STAT_ORDER = {estimate:0, ordered:1, paid:2};
   const SYM = {GEL:'₾', USD:'$'};
+  const STAGES = ['bought','shipping','repair','paint','ready'];
+  const TAGS = ['before','progress','after'];
+  const DEFAULT_PLAN = {shipping:14, repair:10, paint:5}; // planned days, used until the owner sets their own
   const CAR_SVG = `<svg viewBox="0 0 640 360" role="img" aria-label="__CARLABEL__" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bodyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b424b"/><stop offset=".38" stop-color="#16191d"/><stop offset="1" stop-color="#060709"/></linearGradient>
@@ -168,6 +197,29 @@
   const carPhotos = id => S.photos.filter(p => p.car_id === id).sort((a,b) => a.created_at < b.created_at ? -1 : 1);
   function fmtDate(iso){ return new Date(iso).toLocaleDateString(lang === 'ka' ? 'ka-GE' : 'en-GB', {day:'numeric', month:'short'}); }
 
+  // stages and days left: the days left in the current stage plus the planned days of every later stage
+  const stageOf = c => STAGES.includes(c.stage) ? c.stage : 'bought';
+  const planOf = c => Object.assign({}, DEFAULT_PLAN, c.plan || {});
+  const wholeDays = v => Math.max(0, Math.round(num(v) || 0));
+  function daysLeft(c){
+    const i = STAGES.indexOf(stageOf(c)); if (i === STAGES.length - 1) return 0;
+    const plan = planOf(c);
+    let d = wholeDays(c.stage_left);
+    for (let k = i + 1; k < STAGES.length; k++) d += wholeDays(plan[STAGES[k]]);
+    return d;
+  }
+  function statusLine(c){
+    const st = stageOf(c);
+    if (st === 'ready') return `<b>${esc(t('finished'))}</b>`;
+    const d = daysLeft(c);
+    return `${esc(t('now'))} <b>${esc(t('stg_' + st))}</b> · <span class="days num">${esc(d === 1 ? t('dayLeft') : t('daysLeft', {n:d}))}</span>`;
+  }
+  function stepsHtml(c){
+    const cur = STAGES.indexOf(stageOf(c)), ready = cur === STAGES.length - 1;
+    return '<div class="steps">' + STAGES.map((s, i) => `<span class="s${i < cur || ready ? ' done' : i === cur ? ' now' : ''}"><span>${esc(t('stg_' + s))}</span></span>`).join('') + '</div>';
+  }
+  const tagOf = p => TAGS.includes(p.tag) ? p.tag : 'progress';
+
   function totals(items){
     let projected = 0, paid = 0, estOnly = 0, variance = 0, varianceCount = 0;
     const byCat = {};
@@ -213,6 +265,11 @@
   function applyLang(){
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { el.innerHTML = t(el.dataset.i18nHtml); }); // our own trusted strings only
+    $('bandD').textContent = t('bandD', {admin:cfg.adminName || 'the admin'});
+    const curStage = $('cStage').value;
+    $('cStage').innerHTML = STAGES.map(s => `<option value="${s}">${esc(t('stg_' + s))}</option>`).join('');
+    if (curStage) $('cStage').value = curStage;
     document.querySelectorAll('[data-i18n-aria]').forEach(el => el.setAttribute('aria-label', t(el.dataset.i18nAria)));
     document.querySelectorAll('[data-i18n-ph]').forEach(el => el.setAttribute('placeholder', t(el.dataset.i18nPh)));
     document.querySelectorAll('.langSeg button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
@@ -221,6 +278,7 @@
     if (cur) $('fCat').value = cur;
     resetItemDel(); resetCarDel(); resetPhotoDel();
     render();
+    if (!$('vSignin').hidden) renderLanding();
   }
   document.querySelectorAll('.langSeg button').forEach(b => b.addEventListener('click', () => { lang = b.dataset.lang; store.set('cc-lang', lang); applyLang(); }));
   document.querySelectorAll('#curSeg button').forEach(b => b.addEventListener('click', () => { display = b.dataset.cur; store.set('cc-display', display); render(); }));
@@ -252,10 +310,11 @@
       const p = num(c.purchase);
       const pic = c.cover_path && urlFor(c.cover_path) ? `<img src="${esc(urlFor(c.cover_path))}" alt="" loading="lazy">` : carArt();
       return `<button class="card" type="button" data-car="${esc(c.id)}">
-        <div class="pic">${pic}${isMine(c) ? `<span class="mine">${esc(t('yours'))}</span>` : ''}</div>
+        <div class="pic">${pic}${isMine(c) ? `<span class="mine">${esc(t('yours'))}</span>` : ''}<span class="chip"><i></i>${esc(t('stg_' + stageOf(c)))}</span></div>
         <div class="body">
           <h2>${esc(c.name)}</h2>
           <p class="owner">${esc(isMine(c) ? t('ownerYou') : t('ownerBy', {name:c.owner_name || '—'}))}</p>
+          <div class="stack"><div class="status">${statusLine(c)}</div>${stepsHtml(c)}</div>
           <div class="fig num">${fmt(tt.projected)}</div>
           <div class="sub">${esc(t('cardRepair', {v:''}).trim())} · ${esc(t(its.length === 1 ? 'cardItems1' : 'cardItemsN', {n:its.length}))}</div>
           ${p != null ? `<div class="sub num">${esc(t('cardAllIn', {v:fmt(conv(p, c.purchase_cur) + tt.projected)}))}</div>` : ''}
@@ -271,6 +330,8 @@
     $('editCarBtn').hidden = !mine;
     $('addItemBtn').hidden = !mine;
     $('addPhotoBtn').hidden = !mine;
+    $('photoTag').hidden = !mine;
+    $('progress').innerHTML = `<div class="status">${statusLine(car)}</div>${stepsHtml(car)}`;
 
     const items = carItems(car.id), tt = totals(items);
     $('total').textContent = fmt(tt.projected);
@@ -350,7 +411,7 @@
     const photos = carPhotos(car.id);
     if (!photos.length){ $('gallery').innerHTML = `<p class="photos-empty">${esc(mine ? t('photosEmptyCan') : t('photosEmpty'))}</p>`; return; }
     $('gallery').innerHTML = '<div class="gallery">' + photos.map(p =>
-      `<button class="thumb" type="button" data-photo="${esc(p.id)}" aria-label="${esc(t('openPhoto'))}"><img src="${esc(urlFor(p.path))}" alt="" loading="lazy">${p.path === car.cover_path ? `<span class="badge">${esc(t('cover'))}</span>` : ''}</button>`).join('') + '</div>';
+      `<button class="thumb" type="button" data-photo="${esc(p.id)}" aria-label="${esc(t('openPhoto'))}"><img src="${esc(urlFor(p.path))}" alt="" loading="lazy">${p.path === car.cover_path ? `<span class="badge">${esc(t('cover'))}</span>` : ''}${tagOf(p) !== 'progress' ? `<span class="badge tag">${esc(t('tag_' + tagOf(p)))}</span>` : ''}</button>`).join('') + '</div>';
   }
 
   // ---------- navigation ----------
@@ -411,10 +472,19 @@
     $('cPurchaseCur').value = car ? car.purchase_cur : 'USD';
     $('cSale').value = car && car.sale != null ? car.sale : '';
     $('cSaleCur').value = car ? car.sale_cur : 'USD';
+    const plan = car ? planOf(car) : DEFAULT_PLAN;
+    $('cStage').value = car ? stageOf(car) : 'bought';
+    $('cLeft').value = car ? wholeDays(car.stage_left) : 0;
+    $('cPlanShipping').value = plan.shipping; $('cPlanRepair').value = plan.repair; $('cPlanPaint').value = plan.paint;
     $('carErr').textContent = '';
     openDlg($('carDlg'));
   }
   $('editCarBtn').addEventListener('click', () => openCarEditor(S.cars.find(c => c.id === S.carId)));
+  // moving to another stage starts that stage's planned days
+  $('cStage').addEventListener('change', () => {
+    const planned = {shipping:'cPlanShipping', repair:'cPlanRepair', paint:'cPlanPaint'}[$('cStage').value];
+    $('cLeft').value = planned ? wholeDays($(planned).value) : 0;
+  });
   $('carForm').addEventListener('submit', async e => {
     e.preventDefault();
     const name = $('cName').value.trim();
@@ -422,6 +492,9 @@
     const pv = $('cPurchase').value.trim(), sv = $('cSale').value.trim();
     const row = {name, purchase: pv === '' ? null : num(pv), purchase_cur:$('cPurchaseCur').value, sale: sv === '' ? null : num(sv), sale_cur:$('cSaleCur').value};
     if ((row.purchase ?? 0) < 0 || (row.sale ?? 0) < 0){ $('carErr').textContent = t('errNeg'); return; }
+    const days = ['cLeft','cPlanShipping','cPlanRepair','cPlanPaint'].map(id => num($(id).value) ?? 0);
+    if (days.some(d => d < 0)){ $('carErr').textContent = t('errNeg'); return; }
+    Object.assign(row, {stage:$('cStage').value, stage_left:wholeDays(days[0]), plan:{shipping:wholeDays(days[1]), repair:wholeDays(days[2]), paint:wholeDays(days[3])}});
     $('carSave').disabled = true;
     const res = editingCar
       ? await sb.from('cars').update(row).eq('id', editingCar.id).select().single()
@@ -498,6 +571,7 @@
   async function uploadAll(files){
     const car = S.cars.find(c => c.id === S.carId); if (!isMine(car)) return;
     $('addPhotoBtn').disabled = true;
+    const tag = TAGS.includes($('photoTag').value) ? $('photoTag').value : 'progress';
     let done = 0, failed = 0;
     for (let i = 0; i < files.length; i++){
       setUpl(t('uploading', {i:i + 1, n:files.length}));
@@ -506,7 +580,7 @@
         const path = `${S.me.id}/${car.id}/${crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + i}.jpg`;
         const up = await sb.storage.from(BUCKET).upload(path, blob, {contentType:'image/jpeg', upsert:false});
         if (up.error) throw up.error;
-        const ins = await sb.from('photos').insert({car_id:car.id, path}).select().single();
+        const ins = await sb.from('photos').insert({car_id:car.id, path, tag}).select().single();
         if (ins.error){ await sb.storage.from(BUCKET).remove([path]); throw ins.error; }
         S.photos.push(ins.data);
         if (!car.cover_path){
@@ -542,6 +616,7 @@
     const car = S.cars.find(c => c.id === p.car_id), mine = isMine(car);
     $('vImg').src = urlFor(p.path); $('vImg').alt = t('carPhotoAlt', {car: car ? car.name : ''});
     $('vDel').hidden = !mine;
+    $('vTag').hidden = !mine; $('vTag').value = tagOf(p);
     $('vCover').hidden = !mine || (car && car.cover_path === p.path);
     openDlg($('viewer'));
   }
@@ -549,6 +624,12 @@
   $('cover').addEventListener('click', e => {
     const car = S.cars.find(c => c.id === S.carId);
     if (e.target.tagName === 'IMG' && car && car.cover_path){ const p = S.photos.find(x => x.path === car.cover_path); if (p) openViewer(p); }
+  });
+  $('vTag').addEventListener('change', async () => {
+    const p = viewing; if (!p) return;
+    const {data, error} = await sb.from('photos').update({tag:$('vTag').value}).eq('id', p.id).select().single();
+    if (error){ $('vTag').value = tagOf(p); return fail(error); }
+    Object.assign(p, data); render();
   });
   $('vCover').addEventListener('click', async () => {
     const p = viewing; if (!p) return;
@@ -600,10 +681,43 @@
   });
 
   // ---------- sign in / out ----------
-  $('googleBtn').addEventListener('click', async () => {
+  document.querySelectorAll('.gsign').forEach(b => b.addEventListener('click', async () => {
     const {error} = await sb.auth.signInWithOAuth({provider:'google', options:{redirectTo: location.origin + location.pathname}});
     if (error) fail(error, 'errSignin');
-  });
+  }));
+
+  // ---------- landing page (visitors): stage, days left and showcase photos only, never costs ----------
+  const P = {cars:[]};
+  const LOCK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+  function showcaseFig(path, cls, label, note){
+    return path && urlFor(path)
+      ? `<figure class="${cls}"><img src="${esc(urlFor(path))}" alt="" loading="lazy"><figcaption>${esc(label)}</figcaption></figure>`
+      : `<figure class="${cls} nophoto" data-note="${esc(note)}"><figcaption>${esc(label)}</figcaption></figure>`;
+  }
+  function renderLanding(){
+    $('heroArt').innerHTML = carArt();
+    $('pubGarage').hidden = !P.cars.length;
+    $('pubCars').innerHTML = P.cars.map(c => {
+      const st = stageOf(c);
+      const cover = c.cover_path && urlFor(c.cover_path);
+      return `<article class="proj">
+        <div class="pic">${cover ? `<img src="${esc(cover)}" alt="${esc(t('carPhotoAlt', {car:c.name}))}" loading="lazy">` : carArt()}<span class="chip"><i></i>${esc(t('stg_' + st))}</span></div>
+        <div class="body">
+          <h3>${esc(c.name)}</h3>
+          <div class="status">${statusLine(c)}</div>
+          ${stepsHtml(c)}
+          <div class="ba">${showcaseFig(c.before_path, 'before', t('tag_before'), t('noBefore'))}${showcaseFig(c.after_path, 'after', t('tag_after'), t(st === 'ready' ? 'noAfter' : 'afterWait'))}</div>
+          <div class="cost"><span>${esc(t('heroLabel'))}</span><span class="lock">${LOCK_SVG}${esc(t('membersOnly'))}</span></div>
+        </div></article>`;
+    }).join('');
+  }
+  async function loadPublic(){
+    const {data, error} = await sb.rpc('public_garage');
+    if (error || !Array.isArray(data)){ if (error) console.warn(error); return; } // before the SQL is applied the page just has no cars section
+    P.cars = data;
+    await signedUrls(data.flatMap(c => [c.cover_path, c.before_path, c.after_path]).filter(Boolean));
+    renderLanding();
+  }
   const signOut = async () => { await sb.auth.signOut(); location.hash = ''; location.reload(); };
   $('signOut').addEventListener('click', signOut);
   $('deniedOut').addEventListener('click', signOut);
@@ -624,7 +738,7 @@
 
   let started = false;
   async function start(session){
-    if (!session){ show('vSignin'); applyLang(); return; }
+    if (!session){ show('vSignin'); applyLang(); loadPublic(); return; }
     if (started) return; started = true;
     const u = session.user, md = u.user_metadata || {};
     S.me = {id:u.id, email:(u.email || '').toLowerCase(), name: md.full_name || md.name || (u.email || '').split('@')[0]};
