@@ -249,9 +249,11 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 .ba figure{margin:0;position:relative;border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:var(--stage)}
 .ba img{display:block;width:100%;height:100%;object-fit:cover}
 .ba figcaption{position:absolute;left:6px;top:6px;background:rgba(10,10,11,.75);color:#fff;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px}
-.ba figure.nophoto::after{content:attr(data-note);position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:12px;text-align:center;padding:24px 8px 6px}
+.ba figure.nophoto::after{content:attr(data-note);position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:12px;line-height:1.3;text-align:center;padding:26px 8px 8px;text-wrap:balance}
 .ba figure.nophoto{background:#1A1A1D;border:1px dashed #303036}
-.cost{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.cost{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:12px;border-top:1px solid var(--line);font-size:13px;line-height:1.3;color:var(--muted)}
+.cost>span:first-child{white-space:nowrap}
+.cost .lock{white-space:nowrap;flex:none;color:var(--ink);background:#1D1D20;border:1px solid var(--line);border-radius:999px;padding:3px 9px;font-size:11px;font-weight:600;gap:5px}
 .cta-band{margin-top:32px;background:linear-gradient(120deg,#9E0F16,#E31B23 60%,#FF3B41);color:#fff;border-radius:20px;padding:clamp(20px,3vw,32px);display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;justify-content:space-between}
 .cta-band h2{margin:0 0 4px;font:800 clamp(20px,2.4vw,26px)/1.3 var(--sans)}
 .cta-band p{margin:0;color:rgba(255,255,255,.85);max-width:64ch}
@@ -493,6 +495,6 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 
 <script src="config.js?v=20261101a"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script src="app.js?v=20261101a"></script>
+<script src="app.js?v=20261101c"></script>
 </body>
 </html>

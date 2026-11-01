@@ -45,7 +45,7 @@
       lpGarage:'The garage', lpLocked:'Costs are visible to members only', membersOnly:'Members only',
       bandT:'Part of the family or friends?', bandD:'Ask {admin} to add your email, then sign in with Google.',
       now:'Now:', daysLeft:'about {n} days left', dayLeft:'about 1 day left', daysShort:'{n} days left', dayShort:'1 day left', finished:'Finished and ready',
-      noBefore:'No before photo yet', noAfter:'No after photo yet', afterWait:'The after photo is added when it is done',
+      noBefore:'No photo yet', noAfter:'No photo yet', afterWait:'Added when done', repairCost:'Repair cost',
       stg_bought:'Bought', stg_shipping:'Shipping', stg_repair:'Repair', stg_paint:'Paint', stg_ready:'Ready',
       stageLabel:'Current stage', stageLeft:'Days left in this stage', planTitle:'Planned days per stage', planHint:'Visitors see the stage and the total days left, never the costs.',
       photoType:'Photo type', tag_before:'Before', tag_progress:'In progress', tag_after:'After',
@@ -90,10 +90,10 @@
       p1t:'ყველა ხარჯი ერთად', p1d:'ნაწილები, ხელობა, ტრანსპორტი, შეღებვა. ხარჯებს მხოლოდ წევრები ხედავენ.',
       p2t:'რეალური პროგრესი', p2d:'მანქანა გადის გასაგებ ეტაპებს. ჩანს, რა ხდება ახლა და დაახლოებით რამდენი დღე დარჩა.',
       p3t:'ადრე და მერე', p3d:'რეალური ფოტოები სამუშაოს დაწყებამდე და დასრულების შემდეგ.',
-      lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'მხოლოდ წევრებისთვის',
+      lpGarage:'ავტოფარეხი', lpLocked:'ხარჯებს მხოლოდ წევრები ხედავენ', membersOnly:'წევრებისთვის',
       bandT:'ოჯახის ან მეგობრების წრიდან ხარ?', bandD:'სთხოვე {admin}-ს ელფოსტის დამატება და შედი Google-ით.',
       now:'ახლა:', daysLeft:'დაახლოებით {n} დღე დარჩა', dayLeft:'დაახლოებით 1 დღე დარჩა', daysShort:'{n} დღე დარჩა', dayShort:'1 დღე დარჩა', finished:'დასრულებულია, მზადაა',
-      noBefore:'„ადრე“ ფოტო ჯერ არ არის', noAfter:'„მერე“ ფოტო ჯერ არ არის', afterWait:'„მერე“ ფოტო დაემატება დასრულების შემდეგ',
+      noBefore:'ფოტო ჯერ არ არის', noAfter:'ფოტო ჯერ არ არის', afterWait:'დაემატება დასრულებისას', repairCost:'რემონტის ხარჯი',
       stg_bought:'ნაყიდია', stg_shipping:'ტრანსპორტირება', stg_repair:'შეკეთება', stg_paint:'შეღებვა', stg_ready:'მზადაა',
       stageLabel:'მიმდინარე ეტაპი', stageLeft:'დარჩენილი დღეები ამ ეტაპზე', planTitle:'დაგეგმილი დღეები ეტაპების მიხედვით', planHint:'სტუმრები ხედავენ ეტაპს და დარჩენილ დღეებს, ხარჯებს — არა.',
       photoType:'ფოტოს ტიპი', tag_before:'ადრე', tag_progress:'მიმდინარეობს', tag_after:'მერე',
@@ -717,7 +717,7 @@
           <h3>${esc(c.name)}</h3>
           ${stepsHtml(c)}
           <div class="ba">${showcaseFig(c.before_path, 'before', t('tag_before'), t('noBefore'))}${showcaseFig(c.after_path, 'after', t('tag_after'), t(st === 'ready' ? 'noAfter' : 'afterWait'))}</div>
-          <div class="cost"><span>${esc(t('heroLabel'))}</span><span class="lock">${LOCK_SVG}${esc(t('membersOnly'))}</span></div>
+          <div class="cost"><span>${esc(t('repairCost'))}</span><span class="lock">${LOCK_SVG}${esc(t('membersOnly'))}</span></div>
         </div></article>`;
     }).join('');
   }
