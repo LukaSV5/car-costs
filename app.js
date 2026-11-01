@@ -419,8 +419,8 @@
       return `<${tag} class="row${mine ? ' edit' : ''}" ${mine ? `type="button" data-item="${esc(it.id)}" aria-label="${esc(t('editCost'))}: ${esc(nm)}"` : ''}>
         <span class="c-name"><span class="name">${esc(nm)}${qty}</span>${it.note ? `<span class="note">${esc(it.note)}</span>` : ''}</span>
         <span class="c-meta"><span class="c-cat"><span class="cat"><span class="dot" style="background:var(--c-${it.cat})"></span>${esc(catLabel(it.cat))}</span></span><span class="c-status"><span class="pill ${it.status}">${esc(statLabel(it.status))}</span></span></span>
-        <span class="c-est r amt num">${estTxt}</span>
-        <span class="c-act r amt num">${actTxt}</span>
+        <span class="c-est r amt num"><span class="lbl">${esc(t('hEst'))}</span>${estTxt}</span>
+        <span class="c-act r amt num"><span class="lbl">${esc(t('hAct'))}</span>${actTxt}</span>
       </${tag}>`;
     }).join('');
     const filtered = items.length !== all.length;

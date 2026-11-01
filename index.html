@@ -140,6 +140,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .pill.ordered{background:rgba(227,164,59,.15);color:var(--warn)}
 .amt{font-weight:600}
 .diff{display:block;font-size:12px}
+.row .lbl{display:none}
 .diff.over{color:var(--danger)} .diff.under{color:var(--good)}
 .dim{color:var(--muted)}
 .list .empty{border:0;border-radius:0}
@@ -268,7 +269,10 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 /* phones: the top bar wraps there, so it scrolls away instead of staying fixed, and the intro panel is more compact */
 @media (max-width:600px){
   .top{position:static;margin-bottom:16px;padding:10px var(--gut)}
-  #summary{grid-template-columns:1fr 1fr;gap:8px}
+  #summary,#stats{grid-template-columns:1fr 1fr;gap:8px}
+  #stats .stat{padding:12px 14px}
+  #stats .stat .v{font-size:19px}
+  .row .lbl{display:block;font-size:11px;font-weight:500;color:var(--muted);line-height:1.2}
   #summary .stat{padding:12px 14px}
   #summary .stat:last-child{grid-column:1/-1}
   #summary .stat .v{font-size:19px}
@@ -504,6 +508,6 @@ dialog.viewer{width:min(940px,calc(100vw - 24px))}
 
 <script src="config.js?v=20261101a"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
-<script src="app.js?v=20261101i"></script>
+<script src="app.js?v=20261101j"></script>
 </body>
 </html>
